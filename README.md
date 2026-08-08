@@ -1,7 +1,10 @@
-# pyfmcp
+# PyFMCP
 
-A focused [Model Context Protocol](https://modelcontextprotocol.io/) server for
-running Python project checks through pytest, Ruff, and basedpyright.
+[![CI](https://github.com/pzarczynski/pyfmcp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/pzarczynski/pyfmcp/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/pyfmcp)](https://pypi.org/project/pyfmcp/)
+[![Documentation](https://img.shields.io/badge/docs-online-blue)](https://pzarczynski.github.io/PyFMCP/)
+
+An easy-to-use, configurable, Python-focused [Model Context Protocol](https://modelcontextprotocol.io/) providing tools for type-checking, testing and linting your code.
 
 ## Requirements
 
@@ -9,37 +12,13 @@ running Python project checks through pytest, Ruff, and basedpyright.
 - An MCP-compatible client
 - `uv` (recommended) or another Python package installer
 
-## Install and run
+## Usage
 
 Run it from the project you want to inspect:
 
 ```bash
 uv run pyfmcp
 ```
-
-The default transport is stdio. For HTTP, configure `transport=http` and set
-`host` and `port` as needed. Process settings can be supplied as CLI options or
-with `PYFMCP_*` environment variables. The current directory is the default
-project root; use `root_dir` to select another project.
-
-## Settings
-
-Create `pyfmcp.yml` in the project root to configure checks. It is re-read for
-each tool invocation:
-
-```yaml
-tools:
-  pytest:
-    test_args: [-q]
-  ruff_lint:
-    max_diagnostics: 100
-  basedpyright:
-    max_diagnostics: 100
-```
-
-Missing settings files use tool defaults. Invalid YAML or values produce a
-configuration error. See the [configuration guide](docs/configuration.md) for
-all process and tool settings.
 
 ## Development
 
