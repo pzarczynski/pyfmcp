@@ -1,0 +1,12 @@
+.pytest_cache
+.ruff_cache
+.serena
+.continue
+.venv
+**/__pycache__
+AGENTS.md
+pyfmcp.yml
+site
+Dockerfile
+docker-compose.yml
+.dockerignore
