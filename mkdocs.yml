@@ -1,0 +1,19 @@
+site_name: PyFMCP
+site_description: A Python-focused MCP server for code assistance
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Configuration: configuration.md
